@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body,html {
+    color: #000;
+    background-color: #fff;
+    font-family: 'Noto Sans', sans-serif;
+    width: 100%;
+    height: 100vh;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.title {
+    margin: 20px 0;
+}
+.main {
+    border: 8px solid #dddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.name {
+    display: flex;
+    font-size: 32px;
+    font-weight: bold;
+    padding: 8px 16px;
+    color: #7e7e7e;
+    background-color: #ebebeb;
+}
+.name > span {
+    color: #bbb;
+}
+.name-input {
+    font-size: 24px;
+    font-weight: 700;
+    color: #7e7e7e;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.message-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    width: 400px;
+    height: 500px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #007bff #f1f1f1;
+}
+.message-container::-webkit-scrollbar {
+    width: 8px;
+}
+.message-container::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+.message-container::-webkit-scrollbar-thumb {
+    background-color: #007bff;
+    border-radius: 10px;
+}
+.message-left, .message-right {
+    list-style: none;
+    padding: 8px 12px;
+    margin: 12px;
+    max-width: 250px;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+.message-left {
+    border-radius: 20px 20px 20px 0px;
+    align-self: flex-start;
+    border: 1px solid #dddd;
+}
+.message-right {
+    border-radius: 20px 20px 0px 20px;
+    align-self: flex-end;
+    border: 1px solid #dddd;
+    color: #fff;
+    background-color: #007bff;
+}
+.message-left > p, .message-right > p {
+    display: flex;
+    flex-direction: column;
+}
+.message-left > p > span {
+    display: block;
+    font-style: italic;
+    align-self: flex-start;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.message-right > p > span {
+    display: block;
+    font-style: italic;
+    align-self: flex-end;
+    font-size: 12px;
+    margin-top: 4px;
+}
+.feedback {
+    font-style: italic;
+    font-size: 14px;
+    padding: 0px 16px 16px 16px;
+    color: #2d2d2d;
+    text-align: center;
+}
+.message-form {
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    background-color: #fff;
+    border-top: 1px solid #dddd;
+}
+.message-input {
+    flex-grow: 1;
+    height: 48px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    padding: 0 12px;
+}
+.send-button {
+    height: 48px;
+    font-size: 16px;
+    border: none;
+    padding: 0 20px;
+    background-color: #fff;
+    color: #007bff;
+    cursor: pointer;
+}
+.v-divider {
+    height: 48px;
+    width: 4px;
+    background-color: #4c4b4b;
+}
